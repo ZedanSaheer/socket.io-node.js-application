@@ -3,7 +3,7 @@ import io from "socket.io-client"
 import { useState } from 'react';
 import Chat from './components/Chat';
 
-const socket = io.connect("https://zedan-chat-app.herokuapp.com/", {secure: true});
+const socket = io.connect("https://zedan-socket-server.herokuapp.com/", {secure: true} , {transports:['websocket']});
 
 function App() {
 

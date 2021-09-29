@@ -6,7 +6,7 @@ const {Server} = require("socket.io");
 app.use(cors()); 
 
 const server = http.createServer(app);
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3001
 const io = new Server(server,{
     cors:{
         origin:"https://zedan-chat-app.herokuapp.com/",
@@ -14,6 +14,9 @@ const io = new Server(server,{
     }
 });
 
+app.get("/",(req,res)=>{
+    res.send("GREAT");
+})
 
 io.on("connection",(socket)=>{
     console.log(socket.id);
