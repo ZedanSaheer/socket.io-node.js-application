@@ -1,0 +1,137 @@
+.chat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 300px;
+    height: 420px;
+}
+
+.chatHeader {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.5;
+}
+
+.chatHeader p {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: "Bebas Neue";
+}
+
+.chatBody {
+    width: 100%;
+    flex: 4;
+    background-color: white;
+    overflow: hidden;
+}
+
+.messageContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.messageContainer {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.messageContent {
+    width: auto;
+    height: auto;
+    min-height: 40px;
+    max-width: 180px;
+    background-color: #43a047;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 5px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    font-size: 14px;
+  }
+
+.messageMeta {
+    font-size: 10px;
+    text-transform: capitalize;
+}
+
+.messageMeta small:first-child {
+    margin-right: 0.5rem;
+}
+
+#you {
+    justify-content: flex-start;
+  }
+  
+  #you .messageContent {
+    justify-content: flex-start;
+  }
+  
+  #you .messageMeta {
+    justify-content: flex-start;
+    margin-left: 5px;
+  }
+  
+  #other {
+    justify-content: flex-end;
+  }
+  
+  #other .messageContent {
+    justify-content: flex-end;
+    background-color: cornflowerblue;
+  }
+  
+  #other .messageMeta {
+    justify-content:flex-end;
+    margin-right: 5px;
+  }
+  
+  .messageMeta #author {
+    margin-left: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+.chatInput {
+    flex: 0.5;
+    width: 100%;
+    display: flex;
+}
+
+.chatInput input {
+    flex: 2;
+    border: none;
+    padding: 0 1rem;
+    background-color: whitesmoke;
+    outline: none;
+}
+
+.chatInput button {
+    flex: 0.2;
+    border: none;
+    background-color: aqua;
+    color: white;
+    outline: none;
+}
+
+@media (max-width:600px) {
+    .chat {
+        width: 100%;
+        height: 520px;
+    }
+}

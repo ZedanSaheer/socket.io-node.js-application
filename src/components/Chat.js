@@ -30,7 +30,7 @@ const Chat = ({socket , name , room}) => {
     return (
         <div className="chat">
             <div className="chatHeader">
-                <p>Live Chat</p>
+                <p>{room}</p>
             </div>
             <div className="chatBody">
                <ScrollToBottom className="messageContainer">
@@ -41,7 +41,7 @@ const Chat = ({socket , name , room}) => {
                             </div>
                             <div className="messageMeta">
                                 <small>{messageContent?.time}</small>
-                                <small>{messageContent?.author}</small>
+                                <small id="author">{messageContent?.author}</small>
                             </div>
                     </div>)
                 })}
