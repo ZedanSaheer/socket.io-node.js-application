@@ -3,12 +3,7 @@ import io from "socket.io-client"
 import { useState } from 'react';
 import Chat from './components/Chat';
 
-const socketURL =
-  process.env.NODE_ENV === 'production'
-    ? window.location.hostname
-    : 'https://localhost:5000';
-
-const socket = io.connect(socketURL, {secure: true});
+const socket = io.connect("https://zedan-chat-app.herokuapp.com/", {secure: true});
 
 function App() {
 
